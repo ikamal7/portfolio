@@ -1,0 +1,80 @@
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 992px) and (max-width: 1200px) { 
+  
+    
+}
+/* Tablet Layout: 768px. */
+@media only screen and (min-width: 768px) and (max-width: 991px) { 
+ 
+    
+}
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) { 
+	body{
+		font-size: 16px;
+	}
+
+
+  .header{
+
+  }
+  .heading-content{
+    padding: 30px 0;
+  }
+  .heading-content a{
+  }
+  .heading-content h1{
+    font-size: 30px;
+  }
+  .heading-content a.logo, .footer-area a.logo {
+    margin-bottom: 25px;
+    padding: 0 10px;
+    font-size: 35px;
+  }
+  .round-btn{
+    padding: 10px;
+  }
+  .service-box{
+    margin-bottom: 20px;
+  }
+  .off-canvas-menu-trigger{
+    font-size: 20px;
+    padding: 2px 10px;
+  }
+  .off-canvas-menu{
+    width: 200px;
+    padding: 30px;
+  }
+  .off-canvas-menu li a{
+    font-size: 16px;
+  }
+  span.menu-close{
+    padding: 2px 10px;
+    top: 10px;
+    right: 10px;
+  }
+
+}
+/* Wide Mobile Layout: 480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) { 
+		body{
+		font-size: 16px;
+	}
+	h1.bigtext {
+	  color: #fff;
+	  font-size: 24px;
+	  font-weight: 400;
+	  margin-top: 50px;
+	}
+	.header-bg {
+  background-image: url("../img/header.jpg");
+  min-height: 150px;
+}
+
+.fct img {
+  height: auto;
+  margin: 20px 0;
+  width: 100%;
+}
+
+}

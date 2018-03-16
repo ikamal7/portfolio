@@ -1,0 +1,549 @@
+/*--------------------------------------------------------------------
+Author        : Kamal hosen
+Template Name : K dot Personal Portfolio Template
+Developed By  : Kamal
+Version       : 1.0.0
+Author URI    : http://ikamal.me                                       
+--------------------------------------------------------------------*/
+/*--------------------------------------
+Table Of Index
+============================
+1. Default css
+2. Section title css
+3. Common css
+4. Off canvas menu area css
+5. Header area css
+6. Expert area css
+7. Work area css
+8. Portfolio area CSS
+9. Contact area CSS
+10. Footer area CSS
+--------------------------------------*/
+/*--------------------------------------------------------------------
+                         Default Settings
+--------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+
+.alignleft {
+    float: left;
+    margin-right: 15px;
+}
+.alignright {
+    float: right;
+    margin-left: 15px;
+}
+.aligncenter {
+    display: block;
+    margin: 0 auto 15px;
+}
+a:focus { outline: 0 solid }
+img {
+    max-width: 100%;
+    height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: #252a30;
+}
+html,
+body { height: 100% }
+body {
+font-size: 14px;
+color: #93a4aa;
+font-family: 'Montserrat', sans-serif;
+line-height: 1.8;
+}
+a:hover, a:focus { text-decoration: none; color: inherit; }
+
+/* Remove Chrome Input Field's Unwanted Yellow Background Color */
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+/*--------------------------------------------------------------------
+                        Section title CSS
+--------------------------------------------------------------------*/
+.section-padding {
+    padding: 80px 0;
+}
+.section-title {
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size:  32px;
+    line-height: 45px;
+}
+
+.section-title p {
+    font-size: 20px;
+    color: #524e4d;
+}
+/*--------------------------------------------------------------------
+                        Common CSS
+--------------------------------------------------------------------*/
+.round-btn {
+    display:  inline-block;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #FED766;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: .3s;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+.round-btn:hover {
+    background-color: #FED766;
+    color: #252a30;
+    padding: 10px 35px;
+}
+
+.page_scroll {
+    display: block;
+    margin-top: 80px;
+    text-align: center;
+    
+}
+.learn-more-btn {
+    color:  #fff;
+    opacity: .7;
+    padding: 20px;
+    font-size: 14px;
+    transition: color .2s ease-out;
+    font-weight: 300;
+    white-space: nowrap;
+    z-index: 2;
+}
+.box-btn {
+    display: inline-block;
+    background: #FED766;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0;
+    visibility: hidden;
+    transition: .2s;
+}
+.learn-more-btn i.fa{
+    font-size: 130%;
+}
+.learn-more-btn:hover {
+    opacity: 1;
+    color: #fff;
+}
+
+
+.bg-gray {
+    background-color: #EEEEEE;
+}
+.bg-white{
+    background-color: #fff;
+}
+
+
+/*--------------------------------------------------------------------
+                        Off canvas menu area CSS
+--------------------------------------------------------------------*/
+.off-canvas-menu-trigger {
+    position:  fixed;
+    right:  30px;
+    color: #fff;
+    top:  50px;
+    background: #333;
+    font-size:  25px;
+    padding: 2px 15px;
+    z-index: 999;
+    cursor:  pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+.show-icon{
+opacity: 1;
+visibility: visible;
+}
+
+.off-canvas-menu {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 999;
+    background-color: #FED766;
+    padding: 50px;
+    color: #333;
+    left: -300px;
+    visibility: hidden;
+    transition: .3s;
+}
+.show-off-canvas-menu{
+    left: 0;
+    visibility: visible;
+}
+
+span.menu-close {
+    position:  absolute;
+    right:  30px;
+    top: 20px;
+    background:  #000;
+    color: #fff;
+    padding:  5px 10px;
+    cursor:  pointer;
+}
+
+.off-canvas-menu ul {
+    margin:  0;
+    padding:  0;
+    list-style:  none;
+    line-height:  1.9;
+}
+
+.off-canvas-menu li
+ a {
+    color:  #fff;
+    font-weight:  600;
+    font-size:  22px;
+    letter-spacing:  1px;
+    display: block;
+}
+
+.off-canvas-menu-shade {
+    position:  fixed;
+    width:  100%;
+    height:  100%;
+    background:  #333;
+    z-index:  98;
+    opacity:  0;
+    visibility:  hidden;
+    content: "";
+    transition: .3s;
+}
+.shade-show{
+    opacity: .7;
+    visibility: visible;
+}
+
+/*--------------------------------------------------------------------
+                        Header area CSS
+--------------------------------------------------------------------*/
+.header #particles-js {
+    position:  absolute;
+    height:  100%;
+    width:  100%;
+    background-size:  cover;
+    background-position:  center;
+}
+.header{
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-color: #000;
+}
+.header{
+    background-image: url(../img/hero-bg.jpg);
+    
+}
+.header {
+    height: 100vh;
+    color: #fff;
+    position:  relative;
+    z-index: 1;
+}
+
+.heading-content {
+    padding: 60px 0;
+    position: relative;
+}
+
+.heading-content a.logo, .footer-area a.logo {
+    display: inline-block;
+    color: #333;
+    padding: 0px 20px;
+    margin-bottom: 50px;
+    background: #FED766;
+    border-radius: 3px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.3;
+}
+
+.heading-content h1 {
+    font-size: 45px;
+    line-height: 1.7;
+    font-weight: 700;
+    color: #fff;
+}
+.heading-content .cd-headline.clip span {
+    margin: 0;
+    padding: 0;
+}
+
+.header:after {
+    position:  absolute;
+    left:  0;
+    top:  0;
+    width:  100%;
+    height:  100%;
+    content:  "";
+    background-color:  #000;
+    z-index:  -1;
+    opacity: .6;
+}
+
+/*--------------------------------------------------------------------
+                        Expert area CSS
+--------------------------------------------------------------------*/
+.expert-block i.fa {
+    margin-bottom:  25px;
+    font-size:  50px;
+    color: #FED766;
+}
+.expert-block {
+    padding:  20px;
+    transition: .2s ease-in;
+}
+
+.expert-block:hover {
+    box-shadow: 0px 0px 10px #252a30;
+}
+
+/*--------------------------------------------------------------------
+                        Work area CSS
+--------------------------------------------------------------------*/
+.bg-img{
+    background-image: url(../img/project-showcase-glc.png);
+    
+}
+.bg-img {
+    display: inline-block;
+    height: 200px;
+    width: 100%;
+    position: relative;
+    background-color: #ddd;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 30px;
+    z-index: 1;
+    color: #fff;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
+    border-radius: 10px;
+}
+.single-portfolio {
+    padding: 20px;
+}
+.project-details a {
+    background-color:  #FED766;
+    color: #333;
+}
+
+.project-details a:hover {
+    background-color: #333;
+    color: #FED766;
+    border-color: #333;
+}
+
+ul.project-tags {
+    padding:  0;
+    margin:  0;
+    margin-bottom: 15px;
+}
+
+ul.project-tags li {display:  inline-block;padding-right:  5px;font-weight: 600;}
+
+.bg-img span {
+    display:  block;
+    font-size: 30px;
+    position:  absolute;
+    left:  50%;
+    top:  50%;
+    margin-left: -70px;
+    margin-top: -22px;
+}
+
+.bg-img:after {
+    position:  absolute;
+    left:  0;
+    top:  0;
+    width:  100%;
+    height:  100%;
+    content:  "";
+    z-index:  -1;
+    opacity: .8;
+    border-radius: 10px;
+}
+.col-md-4:nth-child(1) .single-portfolio .bg-img:after {
+    background: #9E54E5;
+}
+.col-md-4:nth-child(2) .single-portfolio .bg-img:after {
+    background: #000;
+}
+.col-md-4:nth-child(3) .single-portfolio .bg-img:after {
+    background: #5D90C9;
+}
+.bg-yellow {
+    background: #FED766;
+}
+
+
+/*--------------------------------------------------------------------
+                        Portfolio area CSS
+--------------------------------------------------------------------*/
+.service-box{
+
+}
+.service-box-bg-1{
+    background-image: url(http://rrf.cricbd.info/100/img/1.jpg);
+}
+.service-box-bg-2{
+    background-image: url(http://rrf.cricbd.info/100/img/2.jpg);
+}
+.service-box-bg-3{
+    background-image: url(http://rrf.cricbd.info/100/img/3.jpg);
+}
+.service-box-bg-4{
+    background-image: url(http://rrf.cricbd.info/100/img/1.jpg);
+}
+.service-box {
+    background-size: contain;
+    height: 200px;
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+    position: relative;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.service-box-hover h3 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 400;
+}
+
+
+
+.service-box-hover {
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 100%;
+    transition: .2s;
+}
+
+.service-box:hover .service-box-hover {
+    bottom: 20px;
+}
+
+.service-box:hover .box-btn {
+    opacity: 1;
+    visibility: visible;
+    color: #333;
+}
+
+.service-box:after {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    content: "";
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+    z-index: -1;
+    opacity: .4;
+}
+
+/*--------------------------------------------------------------------
+                        Contact area CSS
+--------------------------------------------------------------------*/
+.workto {
+    color:  #252a30;
+    font-size:  18px;
+    line-height: 1.7;
+}
+
+.workto .round-btn {
+    border-color:  #252a30;
+    color: #252a30;
+    padding: 10px 30px;
+    transition: .5s;
+}
+
+.workto .round-btn:hover {
+    border-color: #252a30;
+    color: #fff;
+    padding: 10px 50px;
+    background: #252a30;
+}
+
+.workto h2 {
+    margin-bottom: 40px;
+}
+
+/*--------------------------------------------------------------------
+                        Footer area CSS
+--------------------------------------------------------------------*/
+.footer-area {
+    padding: 50px 0;
+    background:  #252A30;
+    color: rgba(255, 255, 255, .6);
+    position: relative;
+    
+}
+
+ul.social-links {
+    list-style:  none;
+    margin:  0;
+    padding:  0;
+    margin-top: 20px;
+}
+
+ul.social-links li {
+    display:  inline-block;
+}
+
+ul.social-links li a {
+    display:  block;
+    background:  #1A1D22;
+    height: 35px;
+    width: 35px;
+    border-radius:  50%;
+    font-size: 18px;
+    margin-right:  10px;
+    color: rgba(255,255,255, .6);
+    opacity: .6;
+}
+
+ul.social-links li a:hover {
+    color: rgba(255,255,255, 1);
+    opacity: 1;
+}
+
+span#top {
+    
+    position:  absolute;
+    color:  #333;
+    text-align:  center;
+    top: 0px;
+    left: 20px;
+    font-size:  22px;
+    line-height:  30px;
+    padding: 5px 15px;
+    background: #FED766;
+    cursor:  pointer;
+}
+
